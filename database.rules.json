@@ -1,0 +1,23 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "products": {
+      ".read": true,
+      ".write": "auth != null",
+      "$productId": {
+        ".validate": "newData.hasChildren(['name', 'price', 'description'])"
+      }
+    },
+    "orders": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    }
+  }
+}

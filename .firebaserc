@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "sellmate-6389f",
+    "staging": "sellmate-6389f"
+  },
+  "targets": {},
+  "etags": {}
+}
